@@ -1,0 +1,43 @@
+### Criar um novo paciente (POST)
+POST http://localhost:3000/paciente
+Content-Type: application/json 
+
+
+{
+  "id": 1,
+  "nome": "João Silva",
+  "cpf": "12345678900",
+  "idade": 30,
+  "email": "joao@email.com",
+  "telefone": "11999999999"
+}
+
+### Cadastro do Jonas
+POST http://localhost:3000/paciente
+Content-Type: application/json
+
+{
+  "id": 2,
+  "nome": "Jonas Silva",
+  "cpf": "99999999999",
+  "idade": 35,
+  "email": "jonas@email.com",
+  "telefone": "11999999999"
+}
+
+
+###
+
+### Listar todos os pacientes (GET)
+GET http://localhost:3000/paciente
+
+###
+
+### Buscar paciente por CPF (GET)
+GET http://localhost:3000/paciente/99999999999
+
+###
+
+###No bloco do POST, a linha Content-Type: application/json é obrigatória.
+### Ela avisa ao NestJS: "Ei, o que eu estou te enviando não é um texto qualquer, é um objeto JSON". 
+###Se você esquecer essa linha, o @Body() no seu Controller chegará vazio.
